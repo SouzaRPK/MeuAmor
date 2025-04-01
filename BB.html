@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Surpresa para Você ❤️</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: pink;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+        }
+        .heart {
+            font-size: 100px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .heart:hover {
+            transform: scale(1.1);
+        }
+        .hidden {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="heart" onclick="showQuestion()">❤️</div>
+    <div id="question" class="hidden">
+        <p>Você sabe o quanto eu te amo? ❤️</p>
+        <button onclick="showMessage()">Clique para saber</button>
+    </div>
+    <div id="message" class="hidden">
+        <p>Eu te amo MUITÃO meu amor! HIHIHI 💖</p>
+    </div>
+
+    <script>
+        function showQuestion() {
+            document.getElementById('question').style.display = 'block';
+        }
+        function showMessage() {
+            document.getElementById('message').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
